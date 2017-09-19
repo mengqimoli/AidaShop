@@ -1,0 +1,143 @@
+@CHARSET "UTF-8";
+#cs_wrap {border: 1px solid #d6e5f4;padding: 25px;color: #666;margin: 20px auto;width: 1092;border-radius:5px;}
+#cs_wrap h1 {height: 55px;line-height: 55px;margin: 0;font-weight: 600;}
+#cs_tit ul li {float: left;position: relative;width: 290px;height: 80px;line-height: 16px;color: #333;background: #F2F3F7;padding-left: 24px;margin-right: 6px;margin-top:5px;cursor: not-allowed;}
+.cs_num {position: absolute;font-size: 45px;left: 45px;top: 28px;z-index: 2;color: #666;}
+.cs_text p {font-size: 14px;line-height: 16px;margin-top: 21px;margin-left: 69px;}
+.cs_text span{font-size: 12px;color: #818181;margin-top: 5px;display: block;margin-left: 69px;}
+/*** -------------- 三角形 ---------------- ***/
+.tri {width:0;height:0;border-width: 40px 0 40px 40px;border-style: solid;border-color: transparent transparent transparent #fff;position: relative;right: -290;top:-58;z-index: 3;}
+.triLit {width:0;height:0;border-width: 34px 0 34px 34px;border-style: solid;border-color: transparent transparent transparent #F2F3F7;position: absolute;top:-34;left: -40;}
+#cs_tit ul li.active {background: #75B0DF;color: #fff;cursor: pointer;}
+.active .cs_text span {color: #154F85;}
+.active .cs_num {color: #fff;}
+.active .triLit {border-color: transparent transparent transparent #75B0DF;}
+#cs_tit ul li.actived {background: #E4F0FD;color: #666;cursor: pointer;}
+.actived .cs_text span {color: #666;}
+.actived .cs_num {color: #666;}
+.actived .triLit {border-color: transparent transparent transparent #E4F0FD;}
+/*----------- 选择类型Tab卡 -------------*/
+.tabNone {margin: 0 auto;width:100%;}
+.cs1_border {width:50%;text-align: center;float: left;}
+.tabNone {display: none;}
+.actiTab {display: block;}
+.typeWarp {width: 200px;margin: 60px auto;}
+.typePic {width: 80px;height: 80px;border-radius: 50%; background-color: #73afe1;margin: 0 auto;}
+#geren {background: url("../images/geren1.png") no-repeat;background-size:80px 80px;}
+#qiye {background: url("../images/company.png") no-repeat;background-size:80px 80px;}
+.typeName {height: 55px;line-height: 55px;font-size: 25px;margin-bottom: 8px;}
+.typeDescri {line-height: 28px;}
+.typeWarp a.butA {display: block; margin-top: 40px;margin-bottom: 5px;cursor: pointer;background-color: #0085D7;
+    border-color: transparent; color: #fff;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 16px;
+    line-height: 38px;
+    border-width: 1px;}
+.typeWarp a.butA:HOVER {text-decoration: none;color: #fff;}
+.typeWarp a.isNot {background-color: #EBF1F5;border-color: #DCDEE3;cursor: not-allowed;color: #CCC;}
+.typeWarp a.isNot:HOVER {color: #ccc;}
+/*----------  阅读开店须知选项卡 -----------------*/
+.cs2_borLit {border: 1px solid #d6d6d6;padding: 25px 50px; margin: 15px 0;color: #666;}
+.question {color: #000;}
+.answer {margin-bottom: 38px;margin-top: 5px;}
+.cs2_tip {color: #ee4531;}
+.btn {width:40%;margin: 0 auto;}
+.preBtn {cursor: pointer;
+    display: inline-block;margin: 0;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 16px;
+    line-height: 38px;
+    border-width: 1px;background-color: #EBF1F5;
+    border-color: #C4C6CF;color: #666;margin-right: 20px;}
+.preBtn:hover {color: #333;
+    background-color: #F7F8FA;
+    border-color: #A0A2AD;
+    text-decoration: none;}
+.blueBtn {display: inline-block; margin-top: 40px;margin-bottom: 5px;cursor: pointer;background-color: #0085D7;
+    border-color: transparent; color: #fff;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 16px;
+    line-height: 38px;
+    border-width: 1px;}
+.blueBtn:hover {text-decoration: none;color: #fff;}
+/*---------- 修改、查看 ---------------*/
+.back {height:100%;width:100%;display:none;z-index:100;position:absolute;background-color:gray;filter:alpha(opacity=50); top:0px;left:0px;"
+	/* older safari/Chrome browsers */  
+    -webkit-opacity: 0.5;  
+    /* Netscape and Older than Firefox 0.9 */  
+    -moz-opacity: 0.5;  
+    /* Safari 1.x (pre WebKit!) 老式khtml内核的Safari浏览器*/  
+    -khtml-opacity: 0.5;  
+    /* IE9 + etc...modern browsers */  
+    opacity: .5;  
+}
+#viewTit {width: 90%; margin: 0 auto;border-bottom: 1px solid #d6d6d6;}
+#viewTit h3 {padding: 20px 0;}
+.closeIcon {display: block;width:18px;height:18px;background: url("../images/guanbi.png");background-size: 18px 18px;position: absolute; top: 8px;right: -3px;cursor: pointer;}
+.shadow {
+	position: fixed;
+	padding: 0 10px 20px;
+	top: 50%;
+	left: 50%;
+	width: 30%;
+	max-width: 630px;
+	min-width: 320px;
+	height: auto;
+	z-index: 2000;
+	visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	-moz-transform: translateX(-50%) translateY(-50%);
+	-ms-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+	-webkit-perspective: 1300px;
+	-moz-perspective: 1300px;
+	perspective: 1300px;
+	background: #fff;border: 1px solid #d6d6d6;border-radius: 5px;
+}
+.shadowShow {-webkit-backface-visibility: visible;
+	-moz-backface-visibility: visible;
+	backface-visibility: visible;
+	opacity: 1;visibility: visible;}
+#viewInfo {
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transform: rotateY(-70deg);
+	-moz-transform: rotateY(-70deg);
+	-ms-transform: rotateY(-70deg);
+	transform: rotateY(-70deg);
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+	opacity: 0;
+}
+.shadowShow #viewInfo {
+	-webkit-transform: rotateY(0deg);
+	-moz-transform: rotateY(0deg);
+	-ms-transform: rotateY(0deg);
+	transform: rotateY(0deg);
+	opacity: 1;
+}
+#viewBtn {width: 100%;}
+.upBrBtn { width:66px;height:32px;background: #fd6d37;color:#fff;border-radius:5px;border:none;outline: none;cursor: pointer;margin-left: 40%;margin-top: 20px;}
+.upBrBtn:hover { -webkit-filter:brightness(.9); }
+.infoItem {width:160px;margin: 5px auto;}
+#cs_31 {margin: 10px 0;}
+.radioSex {margin-left:10px;vertical-align: middle;}
+.labSex {margin-left: 5px;}
+#viewBtn p {font-size: 12px;color: red;text-align: center;}
+#formTab tr td:FIRST-CHILD {
+	padding: 10px 0;
+	width: 35%;text-align: right;
+}
+#formTab tr td:last-child {
+	padding: 10px 10px;
+}
+#formTab tr:last-child td {text-align: left;}
+#tipTr2 {color: red;margin-left: 10px;}

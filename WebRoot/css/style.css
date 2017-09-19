@@ -1,0 +1,36 @@
+.style_man_recommend{ font-family: Lato,'Open Sans', sans-sarif; font-size: 16px;}
+.style_man_recommend{margin: 0 auto; width: 1200px; height:362px;overflow: hidden;}
+.row{width: 105%; float: left; margin: 20px auto;}
+
+/*= common css to all effects =*/
+.single-member{width: 280px; float: left; margin:0 2.125% 30px 0; background-color: #fff; text-align: center; position: relative;}
+.member-image img{max-width: 100%; vertical-align: middle;}
+.style_man_recommend h3 {font-size: 24px; font-weight: normal; margin: 10px 0 0; text-transform: uppercase;/*属性控制文本的大小写*/}
+.style_man_recommend h5 {font-size: 16px; font-weight: 300; margin: 0 0 15px; line-height: 22px;}
+.style_man_recommend p {font-size: 14px; font-weight: 300; line-height: 22px; padding: 0 30px; margin-bottom: 10px;}
+.social-touch a{display: inline-block; width: 27px; height: 26px; vertical-align: middle; margin: 0 2px; background-image: url(../images/social-icons.png); background-repeat: no-repeat; opacity: 0.7; transition: 0.3s;}
+.social-touch a:hover{opacity: 1; transition: 0.3s;}
+.fb-touch{background-position: 0 0;}
+.tweet-touch{background-position: -35px 0;}
+.linkedin-touch{background-position: -71px 0;}
+/*= common css to all effects end =*/
+
+/*= effect-3 css =*/
+.effect-3{max-height: 302px; min-height: 302px; overflow: hidden;}
+.effect-3 h3{padding-top: 7px; line-height: 33px;}
+.effect-3 .member-image{border-bottom: 5px solid #e5642b; transition: 0.4s; height: 205px; width: 100%; display: inline-block; float: none; vertical-align: middle;}
+.effect-3 .member-info{transition: 0.4s;}
+.effect-3 .member-image img{width: 100%; vertical-align: bottom;}
+.effect-3 .social-touch{background-color: #e5642b; float: left; left: 0; bottom: 0; overflow: hidden; padding: 5px 0; width: 100%; transition: 0.4s;}
+.effect-3:hover .member-image{border-bottom: 0; border-radius: 0 0 50px 50px; height: 81px; display: inline-block; overflow: hidden; width: 109px; transition: 0.4s;}
+/*= effect-3 css end =*/
+
+/*= Media Query 
+=============== */
+@media only screen and (max-width: 980px){
+	.row{width: 100%; margin: 110px 0;}
+	.team-members{text-align: center;}
+	.single-member{float: none; display: inline-block; vertical-align: bottom;}
+}
+/*= Media Query End
+=================== */

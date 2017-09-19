@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<!-- 关闭动态链接 -->
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+	<constant name="struts.i18n.encoding" value="utf-8" />
+	<constant name="st ruts.objectFactory.spring.autoWire" value="type" />
+	<constant name="struts.objectFactory" value="spring" />
+	<constant name="struts.ui.theme" value="simple"></constant>
+	<constant name="struts.devMode" value="true"></constant>
+	<!--解决乱码 -->
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+	<!-- 设置最大上传值 -->
+	<constant name="struts.multipart.maxSize" value="10701096" />
+
+	<package name="AidaShop" namespace="/"
+		extends="struts-default,json-default">
+
+		<interceptors>
+			<interceptor-stack name="myStack">
+				<!-- 在引入二次参数拦截器 -->
+				<interceptor-ref name="paramsPrepareParamsStack" />
+			</interceptor-stack>
+		</interceptors>
+		<!-- 修改默认的拦截器栈 -->
+		<default-interceptor-ref name="myStack" />
+
+		<!-- 首页 -->
+		<action name="home" class="homeAction">
+			<result>home.jsp</result>
+		</action>
+
+		<!-- login/logout action -->
+		<action name="login" class="adAppLoginAction" method="vaildLoginAd"></action>
+		<action name="loginInfo" class="adLoginInfo" method="LoginInfo">
+			<result type="json">
+				<param name="root">cusInfoMap</param>
+			</result>
+		</action>
+		<action name="loginout" class="adLoginout" method="loginout">
+			<result name="success">/login.html</result>
+		</action>
+
+		<!-- 店铺管理 -->
+		<action name="store_*" class="storeAction" method="{1}">
+			<result>/page/backstage/store/store.jsp</result>
+			<result name="input">/page/backstage/store/store_input.jsp</result>
+			<result name="reload" type="redirectAction">
+				<param name="actionName">store</param>
+				<param name="baseQuery.currentPage">${baseQuery.currentPage}</param>
+				<param name="baseQuery.pageSize">${baseQuery.pageSize}</param>
+				<param name="stId">${stId}</param>
+			</result>
+			<result name="grperson">/page/home/shenqingzhongxin.jsp</result>
+			<result name="apply">/page/home/sqstore/sqstore.jsp</result>
+			<result name="sqvi">/page/home/grzxsqvi.jsp</result>
+			<result name="applylist">/page/backstage/store/store_apply.jsp</result>
+			<result name="applyinput">/page/backstage/store/store_apply_input.jsp
+			</result>
+			<result name="checkapply" type="redirectAction">store_applylist.action</result>
+		</action>
+
+		<!-- 品牌 -->
+		<action name="brand_*" class="brandAction" method="{1}">
+			<result>/page/backstage/brand/brand.jsp</result>
+			<result name="input">/page/backstage/brand/brand_input.jsp
+			</result>
+			<result name="reload" type="redirectAction">
+				<param name="actionName">brand</param>
+				<param name="baseQuery.currentPage">${baseQuery.currentPage}</param>
+				<param name="baseQuery.pageSize">${baseQuery.pageSize}</param>
+				<param name="brId">${brId}</param>
+			</result>
+		</action>
+
+		<!-- 文件上传下载 -->
+		<action name="*FileAction" class="com.aidaL.action.FileAction"
+			method="{1}">
+			<result name="success">/test.jsp</result>
+			<param name="inputPath">/WEB-INF/upload</param>
+			<result name="download" type="stream">
+				<param name="contentType">application/octet-stream;charset=UTF-8</param>
+				<param name="inputName">inputStream</param>
+				<param name="contentDisposition">attachment;filename="${fileName}"</param>
+				<param name="bufferSize">4096</param>
+			</result>
+		</action>
+
+		<!-- 日志管理 -->
+		<action name="*LogAction" class="logBean" method="{1}"></action>
+
+		<action name="*CustomerAction" class="customerBean" method="{1}">
+			<result name="list">/page/backstage/huiyuanliebiao.jsp</result>
+			<result name="vi">/page/backstage/huiyuanvi.jsp</result>
+			<result name="auth" type="redirect">authCustomerAction.action</result>
+			<result name="allist" type="redirect">listCustomerAction.action</result>
+			<result name="viplist" type="redirect">vipCustomerAction.action</result>
+			<result name="stylelist" type="redirect">styleCustomerAction.action
+			</result>
+			<result name="admin" type="redirect">adminCustomerAction.action</result>
+			<result name="sup" type="redirect">supCustomerAction.action</result>
+			<result name="store" type="redirect">storeCustomerAction.action</result>
+			<result name="personal">/page/backstage/personalcenter.jsp</result>
+			<result name="personalist" type="redirect">personalCustomerAction.action
+			</result>
+			<result name="active">/page/register/registeresult.jsp</result>
+			<result name="ordinary">/page/home/setgeren.jsp</result>
+			<result name="up" type="redirect">ordinaryCustomerAction.action</result>
+		</action>
+
+		<!-- 用户管理 -->
+		<action name="user_*" class="userAction" method="{1}">
+			<result>/page/backstage/huiyuanliebiao.jsp</result>
+			<result name="input">/page/backstage/huiyuanvi.jsp</result>
+			<result name="reload" type="redirectAction">
+				<param name="actionName">user</param>
+				<param name="baseQuery.currentPage">${baseQuery.currentPage}</param>
+				<param name="baseQuery.pageSize">${baseQuery.pageSize}</param>
+				<param name="baseQuery.UAdmin">${baseQuery.UAdmin}</param>
+				<param name="baseQuery.UState">${baseQuery.UState}</param>
+				<param name="baseQuery.UStylingDesigner">${baseQuery.UStylingDesigner}</param>
+				<param name="UId">${UId}</param>
+			</result>
+		</action>
+
+		<!-- 商品管理 -->
+		<action name="productInfo_*" class="productInfoAction" method="{1}">
+			<result>/page/backstage/productInfo/productInfo.jsp</result>
+			<result name="input">/page/backstage/productInfo/productInfo_input.jsp
+			</result>
+			<result name="reload" type="redirectAction">
+				<param name="actionName">productInfo</param>
+				<param name="baseQuery.currentPage">${baseQuery.currentPage}</param>
+				<param name="baseQuery.pageSize">${baseQuery.pageSize}</param>
+				<param name="PId">${PId}</param>
+			</result>
+		</action>
+
+		<!-- 商品类别管理 -->
+		<action name="productCate_*" class="productCateAction" method="{1}">
+			<result>/page/backstage/productCate/productCate.jsp</result>
+			<result name="input">/page/backstage/productCate/productCate_input.jsp
+			</result>
+			<result name="reload" type="redirectAction">
+				<param name="actionName">productCate</param>
+				<param name="baseQuery.currentPage">${baseQuery.currentPage}</param>
+				<param name="baseQuery.pageSize">${baseQuery.pageSize}</param>
+				<param name="cgId">${cgId}</param>
+			</result>
+		</action>
+
+		<action name="merchant_*" class="merchantAction" method="{1}">
+			<result>/page/backstage/storemanager/main.jsp</result>
+		</action>
+
+		<!-- 购物车 -->
+		<action name="buycart_*" class="buycartAction" method="{1}">
+			<result>/page/home/buycart/gouwuche.jsp</result>
+			<result name="mycart">/page/home/buycart/buycart.jsp</result>
+			<result name="reload" type="redirect">/buycart</result>
+		</action>
+
+		<!-- 个人中心信息 -->
+		<action name="grzx_*" class="grzxAction" method="{1}">
+			<result name="input">/page/home/setgeren.jsp</result>
+			<result>/page/home/grxx_success.jsp</result>
+		</action>
+
+		<!-- 商品详情 -->
+		<action name="proShow" class="proShowAction">
+			<result>/page/home/proshow.jsp</result>
+		</action>
+
+		<!-- 评论管理 -->
+		<action name="comment_*" class="commentAction" method="{1}">
+			<result>/page/backstage/comment/comment.jsp</result>
+			<result name="input">/page/backstage/comment/comment_input.jsp
+			</result>
+			<result name="save" type="redirectAction">
+				<param name="actionName">proShow</param>
+				<param name="PId">${PId}</param>
+			</result>
+		</action>
+
+		<!-- 订单管理 -->
+		<action name="order_*" class="orderAction" method="{1}">
+			<result>/page/backstage/order/order.jsp</result>
+			<result name="jiesuan">/page/home/jiesuan/jiesuan.jsp</result>
+			<result name="input">/page/backstage/order/order_input.jsp
+			</result>
+			<result name="reload" type="redirectAction">
+				<param name="actionName">order</param>
+				<param name="baseQuery.currentPage">${baseQuery.currentPage}</param>
+				<param name="baseQuery.pageSize">${baseQuery.pageSize}</param>
+				<param name="coId">${coId}</param>
+			</result>
+			
+		</action>
+		
+		
+	</package>
+</struts>    

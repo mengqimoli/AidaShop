@@ -1,0 +1,161 @@
+@CHARSET "UTF-8";
+#bh_container {
+	width:100%;min-width:1200px;background:#f9f9f9;min-height: 100%;
+}
+#bh_mainLayout {
+	width:1200px;margin:0 auto;
+}
+/*页首 */
+#bh_titlewarp {
+	width:100%;min-width:1200px;background:#fff;-moz-box-shadow: 0px 5px 10px #cccccc;
+    -o-box-shadow: 0px 5px 10px #cccccc;-webkit-box-shadow: 0px 5px 10px #cccccc;box-shadow: 0px 5px 10px #cccccc;
+    font-family: "SimSun","Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+}
+#bh_title {
+	width:1200px;height:49px;padding-top: 10px;padding-bottom: 10px;margin:0 auto;
+}
+#bh_logo {
+    float:left;
+}
+#bh_logo a img {
+	width:122px; height:49px;vertical-align: middle;
+}
+#bh_titleWord {
+	float:left;height:49px;line-height: 49px;
+}
+#bh_titleWord h1 {
+	display:inline-block;font-size: 20px;
+}
+#bh_titleWord h1 a {
+	font-weight: bolder;color:#333;
+}
+#bh_titleWord h1 a:hover {
+	text-decoration: none;
+}
+#bh_userid {
+	float:right;font-size:16px;height:49px;line-height: 49px;
+}
+#bh_userid em {
+	padding:0 5px;font-style: normal;
+}
+#hb_logout {
+	cursor: pointer;
+}
+#hb_logout a {
+	border:1px solid #e7e7e7;border-radius:5px;padding:5px 10px;color:#e7e7e7;font-size:12px;
+}
+#hb_logout:hover a {
+	border-color: #ff3c3c;text-decoration:none;color:#ff3c3c;
+}
+#bh_idname {
+	color:blue;
+}
+/*页首 end*/
+
+/*左侧栏 */
+#bh_left {
+	width:179px;background:#fff;border:1px solid #e7e7e7;margin-top:10px;float:left;
+}
+#centerBtn {
+	width:139px;padding:3px 0 3px 40px;height:45px;line-height: 45px;border-bottom: 1px solid #fd6d37;margin-bottom: 10px;cursor: pointer;
+}
+#centerBtn:hover {
+	background-color:#fd6d37;color:#fff;
+}
+.bh_leftli div {
+	width:139px;padding:3px 0 3px 40px;height:36px;line-height: 36px;cursor: pointer;position: relative;
+}
+.iconDian {
+	_line-height: 0;_font-size: 0;width: 4px;height: 4px;background-color: #fd6d37;display: block;
+	position: absolute;left: 20px;top: 20px;
+}
+.iconArrow {
+	width: 9px;
+    height: 10px;
+    display: block;
+    position: absolute;
+    _line-height: 0;
+    _font-size: 0;
+    background: url(../images/icon_myyhd_index_24.png) no-repeat -74px -4px;
+    right: 15px;
+    top: 20px;
+    
+}
+.bh_leftli ul {
+	display:none;
+}
+.bh_ulshow ul {
+	display:block;
+}
+.bh_ulshow div .iconArrow {
+	top:17px;background-position: -219px -2px;
+}
+.bh_leftli span {
+	font-size: 18px;font-weight: bold;font-family: "SimSun","Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+}
+#bh_left ul .bh_ulshow ul .bh_listShow {
+	background: #fd6d37;color:#fff;
+}
+#bh_left ul .bh_leftli ul li {
+	display:block;width:139px;padding:3px 0 3px 40px;height:28px; line-height:28px;font-size: 14px;font-weight: normal; cursor: pointer;color:#333;
+}
+#bh_left ul .bh_leftli ul li:hover {
+	background:#fd6d37;color:#fff;text-decoration: none;
+}
+/*左侧栏 end*/
+
+/*右侧主题部分*/
+#bh_right {
+	width:1007px;border:1px solid #e7e7e7;border-radius:5px;margin-top:10px;margin-left:10px;background:#fff;float:left;margin-bottom:50px;
+}
+#righTit {
+	height:51px;line-height:51px;width:957;margin-left:20px;border-bottom: 1px solid #fd6d37;font-size:16px;padding-left:10px;
+}
+#bh_rightWarp {
+	width:967px; margin:20 auto;
+}
+.bh_rightShow {
+	width:976px;
+}
+/*右侧主题部分 end*/
+.iframeBH {
+	width:100%;min-height:540px;overflow: hidden;
+}
+
+/*品牌列表*/
+#brandListTAb {
+	text-align: center;border-collapse: collapse;width:100%;table-layout: fixed;clear:both;border-top:1px solid #fff;
+}
+#brandListTAb tr td {
+	border-top:1px solid #fff;height:28px;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;padding:10px;font-size: 14px;
+}
+#brandListTAb tbody tr {
+	background: #e5f1f4;
+}
+#brandListTAb tbody tr:HOVER {
+	background:#ecfbd4;
+}
+#brandListTAb thead th {
+	padding:10px 0;background: #328aa4;color: #fff;font-size: 14px;
+}
+.introBh {
+	text-align: left;
+}
+.brandEdit,.brandDelete {
+	display:inline-block;height:28px;width:28px;background-repeat: no-repeat;vertical-align: middle;background-size: 28px 28px;
+}
+.brandEdit {
+	background-image: url(../images/48_edit-333.png);margin-left:20px;
+}
+.brandEdit:hover {
+	background-image: url("../images/48_edit-fd6d37.png");
+}
+.brandDelete {
+	background-image: url("../images/48_delete-333.png");
+}
+.brandDelete:hover {
+	background-image: url("../images/48_delete-fd6d37.png");
+}
+.headTab { margin-bottom: 10px; }
+.footTab{ margin-top: 10px; }
+/*品牌列表 end*/

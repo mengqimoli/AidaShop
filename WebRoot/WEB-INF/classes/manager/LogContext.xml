@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+
+	<!-- LogAction日志 -->
+	<bean id="logBean" class="com.aidaL.action.LogAction" scope="prototype">
+		<property name="logmgr" ref="adAppMgrLog"></property>
+	</bean>
+	<bean id="adAppMgrLog" class="com.aidaL.service.impl.ActionManagerImpl">
+		<property name="adLogDAO" ref="adAppLog"></property>
+	</bean>
+	<bean id="adAppLog" class="com.aidaL.dao.impl.AdLogDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+
+</beans>

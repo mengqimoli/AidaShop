@@ -1,0 +1,33 @@
+@CHARSET "UTF-8";
+.grzx_mainA {color: #fff;}
+.grzx_mainA:hover {text-decoration: none;color: #fff;}
+.grzx_mainA {display: inline-block;margin: 0 20px;}
+.grzx_tit {min-width: 1100px;height: 36px;line-height: 36px;background: #e45050;}
+#grzx_tit_main {margin: 0 auto;color: #ffffff;width: 800px;font-size: 16px;}
+.grzx_warp {width: 1100px;margin: 20 auto;}
+.grzxLeft {float: left;width: 128px;}
+.grzxLeft dl {padding-bottom: 15px;}
+.grzxLeft dl dt {font-weight: 700;height: 28px;line-height: 28px;color: #333;clear: both;}
+.grzxLeft dl dd {display: block;line-height: 24px;clear: both;}
+.grzxLeft dl dd a {color: #666;}
+.grzxRight {float: left;width: 970px;}
+.lastDd {margin-bottom: 15px;}
+/*------- iframe框架 ---------*/
+#grzxFrame {width: 950px;}
+/*----------- 个人信息设置 -----------*/
+#only_info {position: fixed;right: 200px;top: 50px;
+	overflow: hidden;
+    width: 280px;
+    float: left;
+    padding: 10px;
+    margin-bottom: 10px;
+    height: 102px;
+    background: #f9f9f9;
+    border: 1px solid #ccc;
+    color: #666;
+    line-height: 20px;}
+.setBar {width: 90%;border-bottom: 1px solid #f0efee;}
+.frameH3 {display: block;float: left;padding: 5px 10px; cursor: pointer;}
+.frameH3:HOVER {border-bottom: 2px solid #ff3c3c;}
+.spanHover {border-bottom: 2px solid #ff3c3c;}
+#setPwd {display: none;}

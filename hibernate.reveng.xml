@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+	<table name="ad_admin" schema="dbo" catalog="AidaL"
+		class="AdminAD">
+	</table>
+	<table name="ad_admincategory" schema="dbo" catalog="AidaL"
+		class="AdminCategoryAD">
+	</table>
+	<table name="ad_brand" schema="dbo" catalog="AidaL"
+		class="BrandAD">
+	</table>
+	<table name="ad_comment" schema="dbo" catalog="AidaL"></table>
+</hibernate-reverse-engineering>

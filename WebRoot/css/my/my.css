@@ -1,0 +1,25 @@
+@CHARSET "UTF-8";
+
+.page {
+	text-decoration: none; /*去掉下划线*/
+	/* 	border: 1px solid #66FF00; */
+	/* 	padding: 2px; */
+	/* 	background-color: #CCFF99; */
+	/* 	color: white; */
+}
+
+.curpage {
+	/* 	background-color: #00008B; */
+	color: red
+}
+
+.nopage {
+	/* 	background-color: red; */
+	color: #808080;
+	/* 	border: none; */
+}
+
+body {
+	margin: 0;
+	padding: 0
+}

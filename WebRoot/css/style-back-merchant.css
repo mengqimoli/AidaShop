@@ -1,0 +1,442 @@
+@CHARSET "UTF-8";
+.back_mer_wrap {
+	background:#fff;
+	font-size:14px;
+	font-family: "微软雅黑","Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+	height:100%;
+}
+.list_wrap {
+	float:left;
+	width:200px;
+	background:#4C3C2F;
+	height:100%;
+	position: fixed;
+	left:0;
+	z-index: 120;
+}
+.list_title {
+	width:100%;
+	background: #F0AC59;
+}
+.span_name_con {
+	padding:15px 0;
+	height:18px;
+	line-height:18px;
+	text-align: center;
+	overflow: hidden;
+}
+.span_name_con span {
+	font-size: 18px;
+	font-weight: 400;
+	color:#fff;
+}
+.list_main {
+	width:100%;
+	color:#fff;
+}
+#list_main_tit {
+	padding:10px 0;
+}
+#head_portrait {
+	display: inline-block;
+	width:40px;
+	height:40px;
+	margin-left:20px;
+}
+
+#head_portrait img {
+	width:40px;
+	height:40px;
+	border-radius:40px;
+	overflow: hidden;
+}
+#mer_name {
+	display: inline-block;
+	width:120px;
+	font-size:12px;
+	height:40px;
+	line-height:40px;
+	overflow: hidden;
+	margin-left:5px;
+	overflow: hidden;
+	white-space: nowrap;
+	
+}
+.list_item_wrap {
+	width:100%;
+	margin:10px 0;
+}
+.list_item {
+	width:100%;
+	text-align: center;
+	padding: 10px 0;
+	cursor: pointer;
+}
+.list_item em {
+	display:inline-block;
+	width:24px;
+	height:24px;
+}
+.list_item span {
+	display:inline-block;
+	height:24px;
+	line-height: 24px;
+	font-size: 12px; 
+	margin-left:5px;
+}
+#list_home em {
+	background: url("../images/backicon/shophome.png") no-repeat;
+	vertical-align:middle;
+	background-size:22px 22px;
+}
+#list_good em {
+	background: url("../images/backicon/product.png") no-repeat;
+	vertical-align:middle;
+	background-size:22px 22px;
+}
+#list_brand em {
+	background: url("../images/backicon/brand.png") no-repeat;
+	vertical-align:middle;
+	background-size:22px 22px;
+}
+#list_order em {
+	background: url("../images/backicon/dingdan.png") no-repeat;
+	vertical-align:middle;
+	background-size:22px 22px;
+}
+#list_comment em {
+	background: url("../images/backicon/pinglun.png") no-repeat;
+	vertical-align:middle;
+	background-size:22px 22px;
+}
+#list_ad em {
+	background: url("../images/backicon/ad.png") no-repeat;
+	vertical-align:middle;
+	background-size:22px 22px;
+}
+#list_fiance em {
+	background: url("../images/backicon/caiwu.png") no-repeat;
+	vertical-align:middle;
+	background-size:22px 22px;
+}
+#list_refund em {
+	background: url("../images/backicon/refund.png") no-repeat;
+	vertical-align:middle;
+	background-size:22px 22px;
+}
+#list_set em {
+	background: url("../images/backicon/settings.png") no-repeat;
+	vertical-align:middle;
+	background-size:22px 22px;
+}
+.mer_list_selected {
+	background: #36281F;
+	border-top:2px solid #38271D;
+	border-bottom: 2px solid #38271D;
+	border-left: 3px solid #F1AD5A
+}
+.mer_left_content {
+	float:left;
+	background: #EDEEF0;
+}
+.mer_bar {
+	background: #fff;
+	padding:10px 0;
+	width:100%;
+}
+.mer_bar i {
+	display: inline-block;
+	width:20px;
+	height:20px;
+	margin-right:2px;
+}
+.mer_bar span {
+	display: inline-block;
+	height:20px;
+	line-height: 20px;
+	font-size: 12px; 
+	color:#999;
+}
+.addGood {
+	float:left;
+	margin-left:210px;
+	cursor: pointer;
+}
+.addGood i {
+	background: url("../images/backicon/add.png");
+	background-size:20px 20px;
+	background-repeat: no-repeat;
+	vertical-align: middle;
+}
+#mer_bar_ul {
+	float:right;
+}
+#mer_bar_ul li {
+	float:left;
+	margin-left:20px;
+	cursor: pointer;
+}
+#bar_mes i {
+	background: url("../images/backicon/msg-system.png");
+	background-size:20px 20px;
+	background-repeat: no-repeat;
+	vertical-align: middle;
+}
+#bar_exit i {
+	background: url("../images/backicon/exit.png");
+	background-size:20px 20px;
+	background-repeat: no-repeat;
+	vertical-align: middle;
+}
+.mer_left {
+	padding:20px 20px 20px 20px;
+	width:1100px;
+	margin-left:200px;
+}
+.mer_left_wrap {
+	display:none;
+	width:100%;
+}
+.home_show {
+	display: block;
+}
+.show_content {
+	float:left;
+	width:180px;
+	height:80px;
+	background: #fff;
+	margin-left:20px;
+}
+.show_icon {
+	width:50px;
+	height:100%;
+	float:left;
+}
+.show_icon i {
+	display:block;
+	width:24px;
+	height:24px;
+	margin:27px auto;
+}
+.show_main {
+	float:left;
+	margin:20px 0 0 10px;
+}
+.show_main .show_word {
+	display: block;
+	line-height: 14px;
+	height:14px;
+	font-size: 12px;
+}
+.show_number {
+	ine-height: 14px;
+	height:14px;
+	font-size: 12px;
+}
+#xiaoShouJinE {
+	background:#FF8667;
+}
+.show_xiaoshoujine {
+	color:#FF8667;
+	font-size: 12px;
+}
+#xiaoShouJinE i {
+	background: url("../images/backicon/chongzhi.png");
+	background-size:24px 24px;
+	background-repeat: no-repeat;
+	vertical-align: middle;
+}
+#LeiJiDingDan {
+	background: #58BCE0;
+}
+#show_dindanshu {
+	color:#58BCE0;
+}
+#LeiJiDingDan i {
+	background: url("../images/backicon/dingdanpage.png");
+	background-size:24px 24px;
+	background-repeat: no-repeat;
+	vertical-align: middle;
+}
+#JiaoYiZhong {
+	background: #B198DC;
+}
+#show_xszdingdan {
+	color:#B198DC;
+}
+#JiaoYiZhong i {
+	background: url("../images/backicon/jiaoyi.png");
+	background-size:24px 24px;
+	background-repeat: no-repeat;
+	vertical-align: middle;
+}
+#ChengGongXiangMu {
+	background: #70C5BE;
+}
+#show_cgxiangmu {
+	color:#70C5BE;
+}
+#ChengGongXiangMu i {
+	background: url("../images/backicon/jiaoyichenggong.png");
+	background-size:20px 20px;
+	background-repeat: no-repeat;
+	vertical-align: middle;
+}
+#PingJunPingFen {
+	background: #F0AC59;
+}
+#show_pjpinfen {
+	color: #F0AC59;
+}
+#PingJunPingFen i {
+	background: url("../images/backicon/star.png");
+	background-size:20px 20px;
+	background-repeat: no-repeat;
+	vertical-align: middle;
+}
+.manger_bar_tit {
+	width:100%;
+	height:24px;
+	line-height: 24px;
+}
+.mer_left_wrap_name {
+	font-size: 13px;
+	height:24px;
+	line-height: 24px;
+	float:left;
+}
+.add_bar {
+	font-size: 13px;
+	height:24px;
+	line-height: 24px;
+	margin-right:20px;
+	float:right;
+	cursor: pointer;
+}
+.add_bar i {
+	display:block;
+	width:18px;
+	height:18px;
+	background: url("../images/backicon/addblack.png");
+	background-size:18px 18px;
+	background-repeat: no-repeat;
+	margin:3px;
+	vertical-align: middle;
+	float:left;
+}
+.addOver i {
+	background: url("../images/backicon/adde98f36.png");
+	background-size:18px 18px;
+	background-repeat: no-repeat;
+}
+.add_bar span {
+	float:left;
+}
+.edit_bar {
+	font-size: 13px;
+	height:24px;
+	line-height: 24px;
+	margin-right:20px;
+	float:right;
+	cursor: pointer;
+}
+.edit_bar i {
+	display:block;
+	width:18px;
+	height:18px;
+	background: url("../images/backicon/editblack.png");
+	background-size:18px 18px;
+	background-repeat: no-repeat;
+	margin:3px;
+	vertical-align: middle;
+	float:left;
+}
+.edit_bar span {
+	float:left;
+}
+.editOver i {
+	background: url("../images/backicon/edite98f36.png");
+	background-size:18px 18px;
+	background-repeat: no-repeat;
+}
+.manage_set_main {
+	width:100%;
+	margin:10px 0;
+	background:#ffffff;
+}
+#manage_set_dl,#manage_set_dlSet {
+	padding:20px;
+	display:block;
+}
+#manage_set_dl dt,#manage_set_dlSet dt {
+	margin-bottom:10px;
+	margin-left:10px;
+	padding-left:10px;
+	font-size:14px;
+	height:20px;
+	line-height:20px;
+	border-bottom: 1px solid #EDEEF0;
+}
+#manage_set_dl dd,#manage_set_dlSet dd {
+	margin-top:20px;
+	margin-bottom:20px;
+	margin-left:30px;
+	font-size:12px;
+	padding-left:10px;
+	overflow: visible;
+	line-height: 14px;
+}
+#manage_set_dlSet {
+	display:none;
+}
+#manage_set_dlSet input {
+	outline: none;
+	padding:2px 8px;
+}
+.storeTag_edit {
+	width:80px;
+	margin-right:10px;
+	margin-top:5px;
+	margin-left:0px;
+}
+#setFinishBtn {
+	border-style:none;
+	border:0 none;
+	outline:none;
+	width:60px;
+	height:30px;
+	margin-top:20px;
+	cursor:pointer;
+	background:#ff6600;
+	color:#ffffff;
+	font-size:14px;
+	font-weight: 500;
+}
+#addStoreTag {
+	display:inline-block;
+	cursor:pointer;
+	width:25px;
+	height:25px;
+	background:url(../images/backicon/adde98f36.png) no-repeat;
+	vertical-align: middle;
+	background-size:20px 20px;
+	margin-top:5px;
+}
+.storeTagBox {
+	position: relative;
+	z-index: 130;
+	display:inline-block;
+}
+.storeTagBox i {
+	display:inline-block;
+	width:10px;
+	height:10px;
+	cursor:pointer;
+	background:url(../images/backicon/close-d81e06.png) no-repeat;
+	vertical-align:middle;
+	background-size:10px 10px;
+	position:absolute;
+	z-index: 131;
+	top:-2px;
+	right:3px;
+}

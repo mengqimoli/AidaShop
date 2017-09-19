@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>乐享搭配生活馆</title>
+    <meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">    
+	<meta http-equiv="keywords" content="网上超市，网上商城，网络购物，进口食品，美容护理，母婴玩具，厨房清洁用品，家用电器，手机数码，电脑软件办公用品，家居生活，服饰内衣，营养保健，钟表珠宝，饰品箱包，汽车生活，图书音像，礼品卡，药品，医疗器械，隐形眼镜等，AidaLife">
+	<meta http-equiv="description" content="AidaLife，在线搭配平台，在搭配中改变为更好的我">
+    <link rel="shortcut icon" href="images/icon/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/style-aida01.css">
+    <link rel="stylesheet" type="text/css" href="css/style-clear.css">
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="js/js-logincheck.js"></script>
+    
+</head>
+<body>
+    <div class="container">
+        <!-- 头部 -->
+        <div id="wrap_contain">
+            <div id="login_title">
+                <div id="logo">
+                    <a href="home.action">
+                        <img src="images/aidal01.png">
+                    </a>
+                </div>
+                <div id="title_right">
+                	<a href="login.html">请登录</a>
+                    <span class="fr">您好，欢迎光临AidaShop,</span>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <!-- 登录框 -->
+        <div id="contain_mid">
+            <div id="contain_mid_login">
+                <img alt="AidaShop-喜欢搭配的购物网站" src="images/loginpage.jpg">
+                <div id="loginbox">
+                    <div id="loginbox_mid">
+                        <div id="div_title">
+                            <span id="box_title">登录到AIDALShop</span>
+                            <div id="reg">
+                                <a href="page/register/register.jsp" >立即注册</a>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                           <div class="login_row login_row_text">
+                               <label id="login_lab_user" class="login_lab"></label>
+                               <input id="loginname" class="itext" type="text" name="username" tabindex="1" autocomplete="off"
+                                      placeholder="邮箱/用户名/已验证手机">
+                           </div>
+                           <div class="login_row login_row_text">
+                               <label id="login_lab_pwd" class="login_lab"></label>
+                               <input id="signpwd" class="itext" type="password" name="password" tabindex="2" autocomplete="off"
+                                      placeholder="密码">
+                           </div>
+                           <div class="login_row">
+                               <input id="autologin" type="checkbox" name="autologin" tabindex="3">
+                               <label>自动登录</label>
+                               <span id="spanfor"><a target="_blank">忘记密码？</a></span>
+                           </div>
+                           <div class="login_row" id="but_div" onclick="return logincheck();">
+                               <input id="loginbut" type="submit" name="login_sub" value="登  录" tabindex="4">
+                           </div>
+                           <div id="meserror">
+                               <ul id="meserrorul">
+                               </ul>
+                           </div>
+                           <div id="partnerlogin">
+                               <span>合作网站账号登录</span>
+                               <div id="partnericon">
+                                   <a id="qqlogin" title="QQ" target="_blank" href="***"></a>
+                               </div>
+                           </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+
+        </div>
+        <!-- 尾部 -->
+        <div class="simplefooter">
+            <p>Copyright © AidaLife乐享搭配生活 2007-2017，All Rights Reserved</p>
+        </div>
+    </div>
+</body>
+</html>
